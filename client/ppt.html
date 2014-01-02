@@ -1,0 +1,21 @@
+<head>
+  <title>ppt</title>
+</head>
+
+<body>
+  {{> reveal}}
+</body>
+
+<template name="reveal">
+	<div class="reveal">
+		{{> slides}}
+	</div>
+</template>
+
+<template name="slides">
+	<div class="slides">
+		{{#each slide}}
+			<section>{{{html}}}</section>
+		{{/each}}
+	</div>
+</template>
